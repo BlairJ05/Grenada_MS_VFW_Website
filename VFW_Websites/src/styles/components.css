@@ -1,0 +1,15 @@
+.section-title {
+    @apply text-4xl font-bold text-[#0B1E4A];
+}
+
+.gold-button {
+    @apply bg-[#D4871A] text-white px-6 py-3 rounded-md font-semibold hover:bg-[#B8700F] transition-colors;
+}
+
+.navy-button {
+    @apply bg-[#0B1E4A] text-white px-6 py-3 rounded-md font-semibold hover:bg-[#162F5E] transition-colors;
+}
+
+.card {
+    @apply bg-white rounded-xl shadow-md p-6;
+}

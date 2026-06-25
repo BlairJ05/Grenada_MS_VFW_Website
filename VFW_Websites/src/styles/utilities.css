@@ -1,0 +1,11 @@
+.section-padding {
+    @apply py-16;
+}
+
+.container-width {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.gold-divider {
+    @apply w-12 h-1 bg-[#D4871A] rounded;
+}
