@@ -1,0 +1,16 @@
+:root {
+    --navy: #0B1E4A;
+    --gold: #D4871A;
+    --cream: #F5F1E8;
+}
+
+body {
+    font-family: "Source Sans 3", sans-serif;
+    background: var(--cream);
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Playfair Display", serif;
+}
