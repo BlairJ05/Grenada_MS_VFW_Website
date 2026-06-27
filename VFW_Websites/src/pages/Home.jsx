@@ -22,10 +22,16 @@ function Home() {
         <>
             <Hero />
             <Stats />
+            {/* Omit this comment and line 26 below this comment once slideshow is implemented */}
+            <Slideshow /> 
+            {/* {slideshowPhotos.length > 0 && (
+                <section>
+                    <Slideshow />
+                </section>
+            )} */}
+            <UpcomingEvents />
             <CommanderMessage />
             <QuickLinks />
-            <Slideshow />
-            <UpcomingEvents />
             <NewsSection />
             <AboutSection />
             <MapSection />

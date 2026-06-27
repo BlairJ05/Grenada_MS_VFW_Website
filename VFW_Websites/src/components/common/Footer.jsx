@@ -4,7 +4,7 @@ import logo from "../../assets/VFW_Icon.png";
 function Footer() {
     return (
     
-        <footer className="sticky bottom-0 z-50 py-12 px-10 items-center justify-between text-white " style={{ backgroundColor: "#070c1e", fontFamily: "'Playfair Display', serif" }}>
+        <footer className=" bottom-0 z-50 py-12 px-10 items-center justify-between text-white " style={{ backgroundColor: "#070c1e", fontFamily: "'Playfair Display', serif" }}>
 
             <div className="flex justify-center ">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center border-b-1 " style={{ borderBottomColor: "#1A3050"}}>
