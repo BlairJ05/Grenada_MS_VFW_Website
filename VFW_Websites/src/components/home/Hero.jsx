@@ -40,7 +40,7 @@ function Hero() {
                     className="inline-flex items-center gap-2 bg-transparent text-white px-4 py-2 rounded-md transition mt-10 pt-2 pb-2 pl-6 pr-6 font-semibold font-lg border-1 border-white/40 ml-4 hover:bg-white/10 transition-colors"
                 >
                     Donate
-                    <ArrowRight className="w-5 h-5" />
+                    {/* <ArrowRight className="w-5 h-5" /> */}
                 </Link>
             </div>
             <div
