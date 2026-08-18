@@ -1,5 +1,65 @@
-function Contact() {
-    return <h1>Contact section</h1>;
+import { Link } from "react-router-dom";
+import Photo from "../../assets/home/vfw_image_1.png";
+
+function AboutSection() {
+    return (
+        <section className="py-16 bg-[#F5F1E8]">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                    {/* Photo, with an orange border box behind it */}
+                    <div className="relative order-last lg:order-first">
+                        <div className="absolute -bottom-3 -right-3 w-full h-full border-4 border-[#D4871A] rounded-xl" />
+                        <img
+                            src={Photo}
+                            alt="Veteran standing in front of American flags"
+                            className="relative w-full h-80 object-cover rounded-xl shadow-xl"
+                        />
+                    </div>
+
+                    {/* Text content */}
+                    <div>
+                        <div className="flex items-center gap-2 mb-4">
+                            <div className="h-px w-8 bg-[#D4871A]" />
+                            <span className="text-[#D4871A] text-sm font-semibold tracking-widest uppercase">
+                                Our Story
+                            </span>
+                        </div>
+                        <h2
+                            className="text-4xl font-bold text-[#0B1E4A] mb-5"
+                            style={{ fontFamily: "'Playfair Display', serif" }}
+                        >
+                            About Our Post
+                        </h2>
+                        <p className="text-gray-700 leading-relaxed mb-4">
+                            The Veterans of Foreign Wars Post in Grenada, Mississippi has been a
+                            cornerstone of our community for over seven decades. We are dedicated to
+                            honoring the service and sacrifice of our nation's veterans while providing
+                            support to active military personnel and their families.
+                        </p>
+                        <p className="text-gray-700 leading-relaxed mb-8">
+                            Through community events, charitable work, and fellowship, we continue our
+                            mission to serve those who have served our country with unwavering
+                            dedication and pride.
+                        </p>
+                        <div className="flex flex-wrap gap-3">
+                            <Link
+                                to="/applications"
+                                className="bg-[#0B1E4A] text-white px-6 py-3 rounded-md font-semibold hover:bg-[#162F5E] transition-colors"
+                            >
+                                Join Our Post
+                            </Link>
+                            <Link
+                                to="/contact"
+                                className="border-2 border-[#0B1E4A] text-[#0B1E4A] px-6 py-3 rounded-md font-semibold hover:bg-[#0B1E4A] hover:text-white transition-colors"
+                            >
+                                Meet the Team
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
 }
 
-export default Contact;
+export default AboutSection;

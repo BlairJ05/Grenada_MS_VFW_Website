@@ -20,26 +20,21 @@ import Applications from "../pages/Application"
 function Home() {
     return (
         <>
+            {/* Sections that match the Figma homepage design */}
             <Hero />
             <Stats />
-            {/* Omit this comment and line 26 below this comment once slideshow is implemented */}
-            <Slideshow /> 
-            {/* {slideshowPhotos.length > 0 && (
-                <section>
-                    <Slideshow />
-                </section>
-            )} */}
+            <Slideshow />
             <UpcomingEvents />
+            <AboutSection />
+            <CallToAction />
+
+            {/* Extra sections not in the Figma design, shown below it for now */}
             <CommanderMessage />
             <QuickLinks />
             <NewsSection />
-            <AboutSection />
             <MapSection />
-            <CallToAction />
         </>
-        
     );
-    
 }
 
 export default Home;

@@ -18,7 +18,7 @@ function App() {
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/donations" element={<Donations />} />
-                <Route path="/appications" element={<Applications />} />
+                <Route path="/applications" element={<Applications />} />
                 <Route path="/admin" element={<AdminDashboard />} />
             </Routes>
             <Footer />
