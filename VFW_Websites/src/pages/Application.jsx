@@ -1,5 +1,21 @@
 import { useState } from "react";
-import { Shield, CheckCircle } from "lucide-react";
+import { Shield, CheckCircle, ChevronDown } from "lucide-react";
+
+// Full names for the 50 US states. Mississippi is listed first
+// since that's where this post is located.
+const usStates = [
+    "Mississippi",
+    "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado",
+    "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho",
+    "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana",
+    "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota",
+    "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire",
+    "New Jersey", "New Mexico", "New York", "North Carolina",
+    "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania",
+    "Rhode Island", "South Carolina", "South Dakota", "Tennessee",
+    "Texas", "Utah", "Vermont", "Virginia", "Washington",
+    "West Virginia", "Wisconsin", "Wyoming",
+];
 
 const emptyFormData = {
     firstName: "",
@@ -8,7 +24,7 @@ const emptyFormData = {
     phone: "",
     address: "",
     city: "",
-    state: "MS",
+    state: "Mississippi",
     zip: "",
     militaryRank: "",
     unit: "",
@@ -178,15 +194,25 @@ function Application() {
                             <label className="block text-sm font-semibold text-[#0B1E4A] mb-2">
                                 State *
                             </label>
-                            <input
-                                type="text"
-                                name="state"
-                                required
-                                value={formData.state}
-                                onChange={handleChange}
-                                maxLength={2}
-                                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[#D4871A] focus:outline-none uppercase"
-                            />
+                            <div className="relative">
+                                <select
+                                    name="state"
+                                    required
+                                    value={formData.state}
+                                    onChange={handleChange}
+                                    className="w-full appearance-none px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[#D4871A] focus:outline-none bg-white"
+                                >
+                                    {usStates.map((state) => (
+                                        <option key={state} value={state}>
+                                            {state}
+                                        </option>
+                                    ))}
+                                </select>
+                                <ChevronDown
+                                    className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
+                                    size={20}
+                                />
+                            </div>
                         </div>
                         <div>
                             <label className="block text-sm font-semibold text-[#0B1E4A] mb-2">
@@ -198,10 +224,20 @@ function Application() {
                                 required
                                 value={formData.zip}
                                 onChange={handleChange}
+                                placeholder="38901"
                                 className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[#D4871A] focus:outline-none"
                             />
                         </div>
                     </div>
+
+                    <hr className="border-gray-200" />
+
+                    <h3
+                        className="text-lg font-bold text-[#0B1E4A]"
+                        style={{ fontFamily: "'Playfair Display', serif" }}
+                    >
+                        Military Service Information (Optional)
+                    </h3>
 
                     <div className="grid md:grid-cols-2 gap-6">
                         <div>
@@ -213,21 +249,29 @@ function Application() {
                                 name="militaryRank"
                                 value={formData.militaryRank}
                                 onChange={handleChange}
+                                placeholder="e.g., SGT, CPL, PFC"
                                 className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[#D4871A] focus:outline-none"
                             />
                         </div>
                         <div>
                             <label className="block text-sm font-semibold text-[#0B1E4A] mb-2">
-                                Unit
+                                Unit/Division
                             </label>
                             <input
                                 type="text"
                                 name="unit"
                                 value={formData.unit}
                                 onChange={handleChange}
+                                placeholder="e.g., 101st Airborne Division"
                                 className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[#D4871A] focus:outline-none"
                             />
                         </div>
+                    </div>
+
+                    <div className="bg-gray-50 rounded-lg p-6 text-sm text-gray-600">
+                        By submitting this form, you certify that the information provided is accurate
+                        and that you meet the eligibility requirements for VFW membership. A member of
+                        our team will review your application and contact you within 5-7 business days.
                     </div>
 
                     <button

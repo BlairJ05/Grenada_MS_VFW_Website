@@ -70,7 +70,7 @@ function Navbar() {
                         Contact
                     </NavLink>
 
-                    <NavLink to="/admindashbord" className={linkClass}>
+                    <NavLink to="/admin" className={linkClass}>
                         Admin
                     </NavLink>
                 </div>
@@ -135,7 +135,7 @@ function Navbar() {
                     </NavLink>
 
                     <NavLink
-                        to="/admindashbord"
+                        to="/admin"
                         className={linkClass}
                         onClick={() => setMenuOpen(false)}
                     >
