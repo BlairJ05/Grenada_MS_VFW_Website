@@ -58,12 +58,16 @@ function Navbar() {
                         Gallery
                     </NavLink>
 
-                    <NavLink to="/contact" className={linkClass}>
-                        Contact
-                    </NavLink>
-
                     <NavLink to="/donations" className={linkClass}>
                         Donations
+                    </NavLink>
+
+                    <NavLink to="/applications" className={linkClass}>
+                        Join Us
+                    </NavLink>
+
+                    <NavLink to="/contact" className={linkClass}>
+                        Contact
                     </NavLink>
 
                     <NavLink to="/admindashbord" className={linkClass}>
@@ -107,19 +111,27 @@ function Navbar() {
                     </NavLink>
 
                     <NavLink
-                        to="/contact"
-                        className={linkClass}
-                        onClick={() => setMenuOpen(false)}
-                    >
-                        Contact
-                    </NavLink>
-
-                    <NavLink
                         to="/donations"
                         className={linkClass}
                         onClick={() => setMenuOpen(false)}
                     >
                         Donations
+                    </NavLink>
+
+                    <NavLink
+                        to="/applications"
+                        className={linkClass}
+                        onClick={() => setMenuOpen(false)}
+                    >
+                        Join Us
+                    </NavLink>
+
+                    <NavLink
+                        to="/contact"
+                        className={linkClass}
+                        onClick={() => setMenuOpen(false)}
+                    >
+                        Contact
                     </NavLink>
 
                     <NavLink
